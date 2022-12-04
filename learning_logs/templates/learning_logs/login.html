@@ -1,0 +1,15 @@
+{% extends 'learning_logs/base.html' %}
+{% block content %}
+
+  {if % form.errors %}
+    <p>Your username and password did not match, Please try again.</p>
+  {% endif %}
+
+  <form>
+    <button name="submit">Log in</button>
+    <input type="hidden" name="next"
+     value="{% url 'learning_logs:index' %}"/>
+  </form>
+
+{% endblock content %}
+
